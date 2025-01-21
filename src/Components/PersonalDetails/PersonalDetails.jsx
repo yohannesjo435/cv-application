@@ -1,28 +1,6 @@
-import { useState, useEffect } from "react"
+import { useState } from "react"
 
-function PersonalDetails({onChange, fullName, email, phone, address, handlePesonalDetails, clearIsClicked, SetClearIsClicked }) {
-
-
-  const [forceRender, setForceRender] = useState(false)
-  function handleChange(e) {
-    let {name, value} = e.target
-    if (clearIsClicked){
-      e.target.value = " "
-      SetClearIsClicked(false)
-    }  
-    onChange({
-      fullName: name === "FirstName"? value: fullName,
-      email: name === "email"? value: email,
-      phone: name === "phone"? value: phone, 
-      address: name === "address" ? value : address
-    })
-    console.log("clearIsClicked", clearIsClicked)
-    
-,
-    handlePesonalDetails(name, value)
-  }
-
-
+function PersonalDetails({fullName, email, phone, address, handleChange}) {
 
   return (
     <div className="personal-detail-Wrapper">
