@@ -1,39 +1,41 @@
 import { useState, useEffect } from "react"
 
-function PersonalDetails({onChange}) {
-  const [fullName, setFullName] = useState("")
-  const [email, setEmail] = useState("")
-  const [phone, setPhone] = useState("")
-  const [address, setAddress] = useState("")
-  
+function PersonalDetails({onChange, fullName, email, phone, address, handlePesonalDetails, clearIsClicked, SetClearIsClicked }) {
 
+
+  const [forceRender, setForceRender] = useState(false)
   function handleChange(e) {
-    const {name, value} = e.target
-    if (name === "FirstName") setFullName(value)
-    if (name === "email") setEmail(value)
-    if (name === "phone") setPhone(value)
-    if (name === "address") setAddress(value) 
-    
+    let {name, value} = e.target
+    if (clearIsClicked){
+      e.target.value = " "
+      SetClearIsClicked(false)
+    }  
     onChange({
       fullName: name === "FirstName"? value: fullName,
       email: name === "email"? value: email,
       phone: name === "phone"? value: phone, 
       address: name === "address" ? value : address
     })
+    console.log("clearIsClicked", clearIsClicked)
+    
+,
+    handlePesonalDetails(name, value)
   }
+
+
 
   return (
     <div className="personal-detail-Wrapper">
       <h3>Personal Details</h3>
 
-      <form className="personal-details">
+      <form className="personal-details" >
     
         <label>Full name</label>
         <input 
           type="text"
           name="FirstName"
-          onChange={handleChange}
           value={fullName} 
+          onChange={handleChange}
         />
 
         <label>Email</label>
@@ -66,67 +68,3 @@ function PersonalDetails({onChange}) {
 }
 
 export default PersonalDetails;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import { useState } from "react";
-// import Resume from "../resume/resume";
-
-// function App(){
-  
-//   return (
-//     <form className="personal-detail-Wrapper">
-//     <PersonalDetails label={"Email"}></PersonalDetails>
-//   </form>
-//  )
-// }
-
-// function PersonalDetails({label}) {
-//   const [value, setValue] = useState("");
-//   const [email, setEmail] = useState("");
-  
-//   function handleChange(e){
-//     const newValue = e.target.value
-//     setValue(newValue);
-//     setEmail(newValue)
-//   }
-  
-//   return (
-//     <>
-//     <form className="personal-detail-Wrapper">
-//       <label>
-//         Email
-//         <input
-//           className="input-group"
-//           value={value}
-//           onChange={handleChange}
-//         />
-//       </label>
-//     </form>
-//     <Resume email={email} /> {/* Pass the email to Resume here */}
-//   </>
-//   )
-// }
-
-// export default App;
