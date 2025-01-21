@@ -155,7 +155,8 @@ function App() {
     setEmail("")
     setPhone("")
     setAddress("")
-  
+
+    //for the resume
     handleDetailsChange({
       fullName: "",
       email: "",
@@ -163,9 +164,12 @@ function App() {
       address: "",
     })
     
+    //the two clears the the main hooks that stores the data
+    setEducations([])
+    setExperience([])
+    //the two remove it from the resume hooks
     setEducationalDetails([])
     setExperienceDetails([])
-    // console.log("personalDetails")
   }
 
   return (
@@ -181,8 +185,6 @@ function App() {
         phone={phone}
         address={address}
         handlePesonalDetails={handlePesonalDetails}
-        clearIsClicked={clearIsClicked}
-        SetClearIsClicked={SetClearIsClicked}
         handleChange={handleChange}
         >
       </PersonalDetails>
