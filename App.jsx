@@ -12,22 +12,19 @@ import "./src/Components/ClearAndDemo/ClearAndDemo.css"
 import { useState } from "react";
 
 function App() {
-  const [reseted, setRested] = useState(false)
-  const [personalDetails, setPersonalDetails] = useState()
+  const [personalDetails, setPersonalDetails] = useState(
+    {fullName: '', email: '', phone: '', address: ''}
+  )
 
   const [educationalDetails, setEducationalDetails] = useState([]);
   const [experienceDetails, setExperienceDetails] = useState([])
   const handleEducationBackground = (updateEducations) => {
     setEducationalDetails(updateEducations)
-    setRested(false)
-    // console.log(updateEducations)
   }
   const handleDetailsChange = (details) => {
-    setRested(false)
     setPersonalDetails(details)
   }
   const handleExperienceOnChange = (expDetail) => {
-    setRested(false)
     setExperienceDetails(expDetail) 
   }
 
@@ -40,10 +37,8 @@ function App() {
     })
     setEducationalDetails([])
     setExperienceDetails([])
-    setRested(true)
     console.log("personalDetails")
   }
-
 
   return (
   <div className="app">  
@@ -53,7 +48,6 @@ function App() {
         onClear={handleClear}
       ></ClearAndDemo>
       <PersonalDetails 
-        isReseted={reseted}
         onChange={handleDetailsChange}>
       </PersonalDetails>
       

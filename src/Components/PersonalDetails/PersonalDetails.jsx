@@ -1,19 +1,12 @@
 import { useState, useEffect } from "react"
 
-function PersonalDetails({onChange, isReseted}) {
+function PersonalDetails({onChange}) {
   const [fullName, setFullName] = useState("")
   const [email, setEmail] = useState("")
   const [phone, setPhone] = useState("")
   const [address, setAddress] = useState("")
   
-  useEffect(() => {
-    if (isReseted) {
-      setFullName("");
-      setEmail("");
-      setPhone("");
-      setAddress("");
-    }
-  }, [isReseted]);
+
   function handleChange(e) {
     const {name, value} = e.target
     if (name === "FirstName") setFullName(value)

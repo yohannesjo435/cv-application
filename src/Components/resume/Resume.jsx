@@ -1,5 +1,5 @@
 function Resume({personalDetails, educationalDetails, experienceDetails}){
-  console.log("Resume", experienceDetails)
+  console.log(personalDetails)
  return (
   <div className="resume-wrapper">
     <div className="personal-info">
