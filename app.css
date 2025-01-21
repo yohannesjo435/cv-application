@@ -1,0 +1,38 @@
+body {
+  background-color: #F3F5F7;
+
+}
+.app {
+  font-family: "Noto Sans", cursive;
+  width: 80vw;
+  margin: auto;
+  height: 100%;
+  padding: 20px 0;
+  display: flex;
+}
+@media (max-width: 900px){
+  .app {
+    width: 90vw;
+  }
+}
+.edit-side {
+  display: flex;
+  flex-direction: column;
+  /* flex-grow: 1;
+  flex-shrink: 1; */
+  /* flex-basis: 10%; */
+  /* max-width: 75; */
+  gap: 50px;
+}
+
+.resume-container {
+  width: 100%;
+  margin: 0 30px;
+  background-color: white;
+  /* background-color: red; */
+  display: flex;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+  /* flex-grow: 2; */
+  /* flex-shrink: 1;
+  flex-basis: 10%; */
+}

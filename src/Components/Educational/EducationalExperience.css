@@ -1,0 +1,166 @@
+.educaiton-wrapper {
+  background-color:#fff;
+  height: max-content;
+  width: 190px;
+  border-radius: 12px;
+  display: flex;
+  /* align-items: center; */
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-direction: column;
+  padding: 20px 50px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+
+}
+.edu-form-wrapper{
+  background-color: #fff;
+  border: 2px solid #eef0f4;
+  padding: 21px;
+  
+}
+
+.educaiton-wrapper h3{
+  font-family: "Noto Sans", cursive;
+  font-weight: bold;
+  width: max-content;
+  margin: auto;
+  font-size: 22px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.drop-down-icon {
+  outline: 1px solid ghostwhite;
+  margin-bottom: -5px;
+  width: 25px;
+  height: 25px;
+}
+.rotate{
+  transform: rotate(180deg);
+}
+.education-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 25px;
+  /* background-color: aqua; */
+  /* width: 100%; */
+}
+.education-form input {
+  background-color: #F3F5F7;
+  height: 29px;
+  border-radius: 12px;
+  padding: 0px 14px;
+  margin: 10px -1px;
+  border: 2px solid transparent;
+  outline: none;
+  font-size: 12px;
+  
+}
+.education-form label{
+  font-weight: 700;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  height: max-content;
+  /* outline: auto; */
+}
+.educational-info-wrapper  {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background-color: rebeccapurple; */
+}
+.educational-info-wrapper h3 {
+  background-color: #EFF1F3;
+  color: #0E3D63;
+  width: 80%;
+  margin: 30px 0 20px 0;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+}
+.education-form, .removeBtn, .cancelBtn {
+  border: none;
+  border-radius: 4px;
+  font-family: "Noto Sans", sans-serif;
+  padding: 8px 16px;
+  margin: 0 10px 10px 0;
+
+}
+.removeBtn, .cancelBtn {
+  background-color: initial;
+  color: grey;
+  outline: 1px solid grey;
+  cursor: pointer;
+
+}
+
+.saveBtn {
+  border: none;
+  border-radius: 4px;
+  font-family: "Noto Sans", sans-serif;
+  padding: 8px 16px;
+  margin: 0 10px 10px 0;
+  background-color: #187ff5;
+  color: #fff;
+  cursor: pointer;
+
+}
+
+.education-info {
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 30px;
+}
+.education-info .child1{
+  font-size: 15px;
+  display: flex;
+  align-items: start;
+}
+.education-info .child2 {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+.education-info .child2 .resume-school{
+  flex: 2;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+.education-info .child2 .resume-degree{
+  flex: 2;
+  margin-top: 5px;
+  font-size: 14px;
+}
+.add-education{
+  background-color: transparent;
+  font-family: "Noto Sans", cursive;
+  font-weight: 700;
+  font-size: 13px;
+  height: 50px;
+  width: 120px;
+  border-radius: 30px;
+  /* border: none; */
+  /* border-color: #EEF0F4; */
+  border: 4px solid #eef0f4;
+  outline: none;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.education-form div p{
+  width: 200px;
+  text-wrap: wrap;
+  border: 2px solid #F3F5F7;
+  /* height: 50px; */
+  padding: 10px 10px;
+  line-height: 50px;
+  margin: 0 0 5px 0;
+  cursor: pointer;
+}
+
