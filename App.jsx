@@ -9,16 +9,24 @@ import Experience from "./src/Components/Experience/Experience";
 import "./src/Components/Experience/Experience.css";
 import ClearAndDemo from "./src/Components/ClearAndDemo/ClearAndDemo";
 import "./src/Components/ClearAndDemo/ClearAndDemo.css"
+import "./src/demoInformation.js"
 import { useState } from "react";
+import demoExample from "./src/demoInformation.js";
 
 function App() {
-  const [fullName, setFullName] = useState("")
-  const [email, setEmail] = useState("")
-  const [phone, setPhone] = useState("")
-  const [address, setAddress] = useState("")
+  const [fullName, setFullName] = useState(demoExample.personalDetails.fullName)
+  const [email, setEmail] = useState(demoExample.personalDetails.email)
+  const [phone, setPhone] = useState(demoExample.personalDetails.phone)
+  const [address, setAddress] = useState(demoExample.personalDetails.address)
+ 
   const [personalDetails, setPersonalDetails] = useState(
-    {fullName: '', email: '', phone: '', address: ''}
-  )
+    {
+      fullName: demoExample.personalDetails.fullName,
+      email: demoExample.personalDetails.email, 
+      phone: demoExample.personalDetails.phone, 
+      address: demoExample.personalDetails.address
+    }
+  )//I addded this for resume(it where resume details get stored)//don't ask I know
 
   function handleChange(e) {
     let {name, value} = e.target
@@ -44,10 +52,11 @@ function App() {
     setPersonalDetails(details)
   }
   /////////////////////////////////////////////////////////////////////////
-  const [educations, setEducations] = useState([]);
+  const [educations, setEducations] = useState(demoExample.educationalDetails);
   const [isOpen, setIsOpen] = useState(false);//for education drop down
 
-  const [educationalDetails, setEducationalDetails] = useState([]);
+  const [educationalDetails, setEducationalDetails] = useState(demoExample.educationalDetails);//for resume
+  console.log(educationalDetails)
   const handleEducationBackground = (updateEducations) => {
     setEducationalDetails(updateEducations)
   }
@@ -95,10 +104,9 @@ function App() {
     handleEducationBackground(updateEducations)
   }
   //////////////////////////////////////////////////////////////
-  const [experience, setExperience] = useState([])
+  const [experience, setExperience] = useState(demoExample.experienceDetails)
+  const [experienceDetails, setExperienceDetails] = useState(demoExample.experienceDetails)
 
-
-  const [experienceDetails, setExperienceDetails] = useState([])
   const handleExperienceOnChange = (expDetail) => {
     setExperienceDetails(expDetail) 
   }
@@ -172,12 +180,36 @@ function App() {
     setExperienceDetails([])
   }
 
+  function handleLoadDemo() {
+    setFullName(demoExample.personalDetails.fullName)
+    setEmail(demoExample.personalDetails.email)
+    setPhone(demoExample.personalDetails.phone)
+    setAddress(demoExample.personalDetails.address)
+    setPersonalDetails(
+      {
+      fullName: demoExample.personalDetails.fullName,
+      email: demoExample.personalDetails.email, 
+      phone: demoExample.personalDetails.phone, 
+      address: demoExample.personalDetails.address
+    })//for resume
+
+    setEducations(demoExample.educationalDetails)
+    setEducationalDetails(demoExample.educationalDetails)
+    
+    setExperience(demoExample.experienceDetails)
+    setExperienceDetails(demoExample.experienceDetails)
+
+
+
+  }
+
   return (
   <div className="app">  
 
     <div className="edit-side">
       <ClearAndDemo
         onClear={handleClear}
+        handleLoadDemo={handleLoadDemo}
       ></ClearAndDemo>
       <PersonalDetails 
         fullName={fullName}
