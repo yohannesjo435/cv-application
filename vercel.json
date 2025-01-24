@@ -3,7 +3,10 @@
   "builds": [
     {
       "src": "src/main.jsx",
-      "use": "@vercel/react"
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "build"
+      }
     }
   ],
   "routes": [
@@ -11,5 +14,5 @@
       "src": "/(.*)",
       "dest": "/src/main.jsx"
     }
-  ],
+  ]
 }
