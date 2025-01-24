@@ -1,5 +1,18 @@
 {
-   "rewrites":  [
-       {"source": "/(.*)", "destination": "/"}
-    ]
+  "version": 2,
+  "builds": [
+    {
+      "src": "src/main.jsx",
+      "use": "@vercel/react"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/src/main.jsx"
+    }
+  ],
+  "env": {
+    "REACT_APP_API_URL": "https://your-api-url.com" // Example environment variable
+  }
 }
