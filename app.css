@@ -1,10 +1,10 @@
-body {
+body {  
   background-color: #F3F5F7;
-
 }
+
 .app {
   font-family: "Noto Sans", cursive;
-  width: 80vw;
+  width: 85vw;
   margin: auto;
   height: 100%;
   padding: 20px 0;

@@ -1,0 +1,35 @@
+body {
+  position: relative;
+}
+
+.download-btn-wrapper {
+  position: fixed;
+  bottom: 2dvh;
+  right: 2dvw;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #0E3D63;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.download-btn-wrapper img {
+  width: 50%;
+  height: 50%;  
+}
+
+.download-btn-wrapper:hover {
+  width: 60px;
+  height: 60px;
+  border: 4px solid #0E3D63;
+  transition: 0.2s ease-in-out;
+
+}
+.download-btn-wrapper img:hover {
+  width: 55%;
+  height: 55%;
+}

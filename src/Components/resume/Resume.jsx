@@ -1,6 +1,6 @@
 function Resume({personalDetails, educationalDetails, experienceDetails}){
  return (
-  <div className="resume-wrapper">
+  <div className="resume-wrapper" id="resume">
     <div className="personal-info">
       <h1>{personalDetails.fullName}</h1>
       <div className="contact-info">

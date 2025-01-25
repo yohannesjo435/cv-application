@@ -12,7 +12,9 @@ import "./src/Components/ClearAndDemo/ClearAndDemo.css"
 import "./src/demoInformation.js"
 import { useState } from "react";
 import demoExample from "./src/demoInformation.js";
-
+import DownloadCv from "./src/Components/DownloadCv/DownloadCv.jsx";
+import "./src/Components/DownloadCv/DownloadCv.css";
+import  html2pdf  from 'html2pdf.js';
 function App() {
   const [fullName, setFullName] = useState(demoExample.personalDetails.fullName)
   const [email, setEmail] = useState(demoExample.personalDetails.email)
@@ -198,65 +200,71 @@ function App() {
     
     setExperience(demoExample.experienceDetails)
     setExperienceDetails(demoExample.experienceDetails)
-
-
-
   }
 
-  return (
-  <div className="app">  
+  function handleDownload() {
+      const element = document.getElementById("resume")
+      console.log(element)
+      html2pdf(element)
+    
+  }
 
-    <div className="edit-side">
-      <ClearAndDemo
-        onClear={handleClear}
-        handleLoadDemo={handleLoadDemo}
-      ></ClearAndDemo>
-      <PersonalDetails 
-        fullName={fullName}
-        email={email}
-        phone={phone}
-        address={address}
-        handlePesonalDetails={handlePesonalDetails}
-        handleChange={handleChange}
-        >
-      </PersonalDetails>
-      
-      <EducationalExperience
-        handleEducationChange={handleEducationChange}
-        educations={educations}
-        handleAddEducation={handleAddEducation}
-        handleSave={handleSave}
-        handleRemove={handleRemove}
-        handleEdit={handleEdit}
-        handleCancel={handleCancel}
-        isOpen={isOpen}
-        handleOpen={handleOpen}
-        >
-      </EducationalExperience>
-
-      <Experience 
-        experience={experience}
-        handleAddExperience={handleAddExperience}
-        handleExperience={handleExperience}
-        handleRemoveExperience={handleRemoveExperience}
-        handleSaveExperience={handleSaveExperience}
-        handleEditExperience={handleEditExperience}
-        handleCancelExperience={handleCancelExperience}
-        >
-
-        </Experience>
+  return (<>
+    
+    <div className="app">
+      <div className="edit-side">
+        <ClearAndDemo
+          onClear={handleClear}
+          handleLoadDemo={handleLoadDemo}
+        ></ClearAndDemo>
+        <PersonalDetails
+          fullName={fullName}
+          email={email}
+          phone={phone}
+          address={address}
+          handlePesonalDetails={handlePesonalDetails}
+          handleChange={handleChange}
+          >
+        </PersonalDetails>
+    
+        <EducationalExperience
+          handleEducationChange={handleEducationChange}
+          educations={educations}
+          handleAddEducation={handleAddEducation}
+          handleSave={handleSave}
+          handleRemove={handleRemove}
+          handleEdit={handleEdit}
+          handleCancel={handleCancel}
+          isOpen={isOpen}
+          handleOpen={handleOpen}
+          >
+        </EducationalExperience>
+        <Experience
+          experience={experience}
+          handleAddExperience={handleAddExperience}
+          handleExperience={handleExperience}
+          handleRemoveExperience={handleRemoveExperience}
+          handleSaveExperience={handleSaveExperience}
+          handleEditExperience={handleEditExperience}
+          handleCancelExperience={handleCancelExperience}
+          >
+          </Experience>
+      </div>
+      <div className="resume-container">
+        <Resume
+          personalDetails={personalDetails}
+          educationalDetails={educationalDetails}
+          experienceDetails={experienceDetails}
+          >
+          </Resume>
+      </div>
     </div>
 
-    <div className="resume-container">
-      <Resume 
-        personalDetails={personalDetails} 
-        educationalDetails={educationalDetails}
-        experienceDetails={experienceDetails}
-        >
-        </Resume>
-    </div>
-
-  </div>
+    <DownloadCv
+      handleDownload={handleDownload}
+    >
+    </DownloadCv>
+  </>
   )
 }
 
