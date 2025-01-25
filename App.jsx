@@ -203,9 +203,15 @@ function App() {
   }
 
   function handleDownload() {
-      const element = document.getElementById("resume")
-      console.log(element)
-      html2pdf(element)
+      const element = document.getElementById('resume')
+      html2pdf().from(element).set({
+        // margin: 1,
+        filename: 'Cv.pdf',
+        image: { type: 'jpeg', quality: 1 },
+        html2canvas: { scale: 4 }, // don't tell the differnce beween 2 and 3
+        jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+      })
+  .save();
     
   }
 
