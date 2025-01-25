@@ -10,7 +10,7 @@ const demoExample = {
   educationalDetails: [{
     school: "University of Gondar",
     degree: "Computer Science",
-    startDate: "2020/01/02",
+    startDate: "01/02/1998",
     endDate: "10/10/2024",
     location: "Gondar, Ethiopia"
   }],
