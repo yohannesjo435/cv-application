@@ -3,8 +3,8 @@ import Experience from "./Components/Experience/Experience";
 const demoExample = {
   personalDetails: {
     fullName: "Yohannes Tesfaye",
-    email: "yohannes@gmail.com",
-    phone: "0901964187",
+    email: "gofereTech@gmail.com",
+    phone: "0901020304",
     address: "Addis Ababa, Ethiopia"
   },
   educationalDetails: [{
