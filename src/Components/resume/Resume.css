@@ -107,3 +107,108 @@ body {
 .resume-company-name {
   font-weight: bold;
 }
+
+@media (max-width: 900px) {
+  .resume-wrapper {
+    width: 100%;
+    height: 100%;
+  }
+  .resume-location-wrapper img {
+   color: white;
+  }
+  .personal-info {
+    background-color: #0E374E;
+    /* height: 150px; */
+    width: 100%;
+    color: #ffffff; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 36px 0; 
+  }
+  
+  .personal-info h1 {
+    /* font-size: 2.5em; */
+    margin: 0;
+  }
+  
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    font-size: 1rem;
+    display: flex;
+    gap: 15px;
+  }
+  
+  .contact-info p {
+    display: flex;
+    align-items: center;
+    margin: 5px -5px;
+  }
+  
+  .logo-mail, .logo-phone {
+    width: 20px; 
+    /* height: 20px;  */
+    background-color: white;
+    margin-right: 10px;
+  }
+  .logo-phone {
+    background-color: unset;
+  }
+  
+  .educational-info-wrapper {
+    margin-top: 20px;
+  }
+  
+  .educational-info-wrapper h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #0E374E;
+    border-bottom: 2px solid #ddd; 
+    padding-bottom: 5px;
+  }
+  .education-info {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    padding: 10px 0;
+    border: 1px solid #eaeaea;
+    border-radius: 4px;
+  }
+  
+  .education-info-group {
+    flex: 1;
+  }
+  
+  .resume-school {
+    font-weight: bold;
+    color: #0E374E;
+  }
+  .resume-degree {
+    font-style: italic;
+    color: #555; 
+    
+  }
+  
+  .resume-experience-wrapper {
+    font-family: "Noto Sans", sans-serif;
+    width: 80%;
+    margin: 10px 0;
+    padding: 10px 0;
+    border: 1px solid #eaeaea;
+    border-radius: 4px;
+    /* background-color: #0E374E; */
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+  }
+  .resume-year {
+  }
+  .resume-address {
+    color: #555; 
+  }
+  .resume-company-name {
+    font-weight: bold;
+  }
+}

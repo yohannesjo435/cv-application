@@ -36,3 +36,24 @@ body {
   /* flex-shrink: 1;
   flex-basis: 10%; */
 }
+
+@media (max-width: 990px) {
+  .app {
+    width: 95vw;
+    flex-direction: column;
+    /* background-color: aqua; */
+  }
+  .edit-side {
+    margin: 20px 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    /* background-color: blue; */
+  }
+  .resume-container {
+    width: 100%;
+    margin: 0;
+    /* background-color: red;/ */
+
+  }}
