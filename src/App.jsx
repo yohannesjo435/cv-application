@@ -2,7 +2,7 @@ import { useState } from  "react";
 import PersonalDetails from "./Components/PersonalDetails/PersonalDetails";
 import "./Components/PersonalDetails/PersonalDetails.css"
 import Resume from "./Components/Resume/Resume";
-import "./Components/resume/Resume.css"
+import "./Components/Resume/Resume.css"
 import EducationalExperience from "./Components/Educational/EducationalExperience";
 import "./Components/Educational/EducationalExperience.css"
 import Experience from "./Components/Experience/Experience";
