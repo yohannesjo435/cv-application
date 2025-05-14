@@ -1,6 +1,5 @@
 import PersonalDetails from "./src/Components/PersonalDetails/PersonalDetails";
 import "./src/Components/PersonalDetails/PersonalDetails.css"
-import "./app.css"
 import Resume from "./src/Components/Resume/Resume.jsx";
 import "./src/Components/resume/Resume.css"
 import EducationalExperience from "./src/Components/Educational/EducationalExperience";
