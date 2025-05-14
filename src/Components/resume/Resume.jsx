@@ -1,3 +1,8 @@
+import emailImg from "../../assets/mail.png"
+import phoneImg from "../../assets/whitePhone.png"
+import locationImg from "../../assets/whiteLocation.png"
+
+
 function Resume({personalDetails, educationalDetails, experienceDetails}){
  return (
   <div className="resume-wrapper" id="resume">
@@ -5,16 +10,16 @@ function Resume({personalDetails, educationalDetails, experienceDetails}){
       <h1>{personalDetails.fullName}</h1>
       <div className="contact-info">
         <p>
-          {personalDetails.email?<img className="logo-mail" src="src\assets\mail.png" style={{marginRight: "10px", marginBottom:" -3px"}}/>:null}
+          {personalDetails.email?<img className="logo-mail" src={emailImg} style={{marginRight: "10px", marginBottom:" -3px"}}/>:null}
           {personalDetails.email}
         </p>
         <p className="resume-phone-wrapper">
-          {personalDetails.phone && <img className="logo-phone" src="src\assets\whitephone.png"/>}
+          {personalDetails.phone && <img className="logo-phone" src={phoneImg}/>}
           {personalDetails.phone}
         </p>
         
         <p className="resume-location-wrapper">
-          {personalDetails.address && <img className="logo-phone" src="src\assets\whiteLocation.png"/>}
+          {personalDetails.address && <img className="logo-phone" src={locationImg}/>}
           {personalDetails.address}</p>
       </div>
     </div>

@@ -1,4 +1,6 @@
 import { useState } from "react";
+import dropDown2 from "../../assets/dropDown2.png"
+
 
 function Experience({experience, handleAddExperience, handleExperience, handleRemoveExperience, handleSaveExperience, handleEditExperience, handleCancelExperience}) {
   const [isOpen, setIsOpen] = useState(false)//just left this to handle the drop down
@@ -7,7 +9,7 @@ function Experience({experience, handleAddExperience, handleExperience, handleRe
     <div className="Experience-wrapper">
       <h3 onClick={() => setIsOpen(!isOpen)}>
         Experience 
-        <img className="DropDownBtn" src="src\assets\dropDown2.png"/>
+        <img className="DropDownBtn" src={dropDown2}/>
       </h3>
 
       {isOpen && 

@@ -1,4 +1,7 @@
 import { useState } from "react";
+import dropDown2 from "../../assets/dropDown2.png"
+
+
 
 function EducationalExperience({/*EducationOnChange,*/ handleEducationChange, educations, handleAddEducation, handleSave, handleRemove, handleEdit, handleCancel, isOpen, handleOpen}){
 
@@ -9,7 +12,7 @@ function EducationalExperience({/*EducationOnChange,*/ handleEducationChange, ed
         Education 
         <img 
           className={`drop-down-icon ${isOpen? "rotate": ""}`} 
-          src="src/assets/dropDown2.png"/> 
+          src={dropDown2}/> 
       </h3>
 
       {isOpen &&         
