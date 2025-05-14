@@ -43,14 +43,20 @@ body {
   margin: 5px -5px;
 }
 
-.logo-mail, .logo-phone {
+.logo-mail, .logo-phone, .logo-location {
   width: 20px; 
   /* height: 20px;  */
   background-color: white;
   margin-right: 10px;
 }
+.logo-location {
+  background-color: unset;
+  
+}
 .logo-phone {
   background-color: unset;
+  width: 35px; 
+
 }
 
 .educational-info-wrapper {

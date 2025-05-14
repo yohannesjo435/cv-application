@@ -1,5 +1,5 @@
 import emailImg from "../../assets/mail.png"
-import phoneImg from "../../assets/whitePhone.png"
+import phoneImg from "../../assets/phone.png"
 import locationImg from "../../assets/whiteLocation.png"
 
 
@@ -19,7 +19,7 @@ function Resume({personalDetails, educationalDetails, experienceDetails}){
         </p>
         
         <p className="resume-location-wrapper">
-          {personalDetails.address && <img className="logo-phone" src={locationImg}/>}
+          {personalDetails.address && <img className="logo-location" src={locationImg}/>}
           {personalDetails.address}</p>
       </div>
     </div>
