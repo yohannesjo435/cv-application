@@ -1,7 +1,7 @@
 import { useState } from  "react";
 import PersonalDetails from "./Components/PersonalDetails/PersonalDetails";
 import "./Components/PersonalDetails/PersonalDetails.css"
-import Resume from "./Components/Resume/Resume.jsx"
+import Resume from "./Components/Resume/Resume"
 import "./Components/Resume/Resume.css"
 import EducationalExperience from "./Components/Educational/EducationalExperience";
 import "./Components/Educational/EducationalExperience.css"
