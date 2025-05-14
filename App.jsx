@@ -1,6 +1,7 @@
+import { useState } from  "react";
 import PersonalDetails from "./src/Components/PersonalDetails/PersonalDetails";
 import "./src/Components/PersonalDetails/PersonalDetails.css"
-import Resume from "./src/Components/Resume/Resume.jsx";
+import Resume from "./src/Components/Resume/Resume";
 import "./src/Components/resume/Resume.css"
 import EducationalExperience from "./src/Components/Educational/EducationalExperience";
 import "./src/Components/Educational/EducationalExperience.css"
@@ -9,9 +10,8 @@ import "./src/Components/Experience/Experience.css";
 import ClearAndDemo from "./src/Components/ClearAndDemo/ClearAndDemo";
 import "./src/Components/ClearAndDemo/ClearAndDemo.css"
 import "./src/demoInformation.js"
-import { useState } from "react";
 import demoExample from "./src/demoInformation.js";
-import DownloadCv from "./src/Components/DownloadCv/DownloadCv.jsx";
+import DownloadCv from "./src/Components/DownloadCv/DownloadCv";
 import "./src/Components/DownloadCv/DownloadCv.css";
 import  html2pdf  from 'html2pdf.js';
 function App() {
