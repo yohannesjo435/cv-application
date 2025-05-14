@@ -1,20 +1,21 @@
 import { useState } from  "react";
-import PersonalDetails from "./src/Components/PersonalDetails/PersonalDetails";
-import "./src/Components/PersonalDetails/PersonalDetails.css"
-import Resume from "./src/Components/Resume/Resume";
-import "./src/Components/resume/Resume.css"
-import EducationalExperience from "./src/Components/Educational/EducationalExperience";
-import "./src/Components/Educational/EducationalExperience.css"
-import Experience from "./src/Components/Experience/Experience";
-import "./src/Components/Experience/Experience.css";
-import ClearAndDemo from "./src/Components/ClearAndDemo/ClearAndDemo";
-import "./src/Components/ClearAndDemo/ClearAndDemo.css"
-import "./src/demoInformation.js"
-import demoExample from "./src/demoInformation.js";
-import DownloadCv from "./src/Components/DownloadCv/DownloadCv";
-import "./src/Components/DownloadCv/DownloadCv.css";
+import PersonalDetails from "./Components/PersonalDetails/PersonalDetails";
+import "./Components/PersonalDetails/PersonalDetails.css"
+import Resume from "./Components/Resume/Resume";
+import "./Components/resume/Resume.css"
+import EducationalExperience from "./Components/Educational/EducationalExperience";
+import "./Components/Educational/EducationalExperience.css"
+import Experience from "./Components/Experience/Experience";
+import "./Components/Experience/Experience.css";
+import ClearAndDemo from "./Components/ClearAndDemo/ClearAndDemo";
+import "./Components/ClearAndDemo/ClearAndDemo.css"
+import "./demoInformation.js"
+import demoExample from "./demoInformation.js";
+import DownloadCv from "./Components/DownloadCv/DownloadCv";
+import "./Components/DownloadCv/DownloadCv.css";
 import  html2pdf  from 'html2pdf.js';
 function App() {
+
   const [fullName, setFullName] = useState(demoExample.personalDetails.fullName)
   const [email, setEmail] = useState(demoExample.personalDetails.email)
   const [phone, setPhone] = useState(demoExample.personalDetails.phone)
